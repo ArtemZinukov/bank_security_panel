@@ -13,3 +13,6 @@
 # Ignore sistem files
 Thumbs.db
 .DS_Store
+
+*.toml
+*.lock

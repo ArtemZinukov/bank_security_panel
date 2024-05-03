@@ -8,12 +8,12 @@ env.read_env()
 
 DATABASES = {
     'default': {
-        'ENGINE': env('ENGINE_DB'),
-        'HOST': env('HOST_DB'),
+        'ENGINE': env.str('ENGINE_DB'),
+        'HOST': env.str('HOST_DB'),
         'PORT': env.int('PORT_DB'),
-        'NAME': env('NAME_DB'),
-        'USER': env('USER'),
-        'PASSWORD': env('PASSWORD'),
+        'NAME': env.str('NAME_DB'),
+        'USER': env.str('USER'),
+        'PASSWORD': env.str('PASSWORD'),
     }
 }
 
@@ -25,7 +25,7 @@ DEBUG = env.bool('DEBUG', default=False)
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

@@ -14,5 +14,5 @@
 Thumbs.db
 .DS_Store
 
-*.toml
-*.lock
+pyproject.toml
+poetry.lock
